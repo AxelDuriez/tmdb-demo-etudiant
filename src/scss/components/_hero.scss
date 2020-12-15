@@ -1,0 +1,23 @@
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.hero p{
+  font-family: var(--ff-title-primary);
+  font-size: var(--fz-h1);
+  font-weight: bold;
+  color: var(--color-text-secondary);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  position: absolute;
+  padding: 20px 40px;
+  border-radius: 30px;
+}

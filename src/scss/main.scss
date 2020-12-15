@@ -26,7 +26,7 @@
 // ELEMENTS
 // Modification des styles généraux de la page. Ce sont les styles qui seront généralement hérités par les éléments de la page.
 @import "elements/body";
-@import "elements/headings";
+@import "elements/titres";
 @import "elements/hr";
 @import "elements/images";
 @import "elements/links";
@@ -46,6 +46,7 @@
 @import "components/fiche-film";
 @import "components/liste-films";
 @import "components/template";
+@import "components/hero";
 
 
 

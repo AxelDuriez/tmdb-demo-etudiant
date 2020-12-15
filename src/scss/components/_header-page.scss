@@ -1,2 +1,26 @@
 //STYLE DE NOTRE HEADER
 
+header{
+  height: 150px;
+  color: var(--color-text-tertiary);
+  background-color: var(--color-bg-tertiary);
+}
+
+header ul{
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header li{
+  list-style: none;
+  cursor: pointer;
+}
+
+h1{
+  margin: 0;
+  cursor: pointer;
+}

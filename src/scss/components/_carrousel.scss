@@ -1,12 +1,49 @@
 .carrousel{
-  background-image: src="../images/carrousel";
+  background-color: var(--color-bg-secondary);
 
-  display: flex;
-  justify-content: space-between;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 
-  div{
-    width: calc(33.3333% - 20px);
+  text-align: center;
 
+  h2{
+    color: var(--color-text-tertiary);
+    text-align: center;
+  }
+
+  ul{
+    margin: 0;
+  }
+
+  .carousel-items{
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-item{
+    margin-left: 1rem;
+
+    flex: 1 0 450px;
+
+    scroll-snap-align: start;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: var(--color-bg-secondary);
+  }
+
+  ::-webkit-scrollbar{
+    height: 6px;
+    background-color: var(--color-bg-tertiary);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: var(--color-bg-primary);
+    border-radius: 3px;
   }
 
 }

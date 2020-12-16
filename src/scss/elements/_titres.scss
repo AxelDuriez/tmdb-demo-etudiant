@@ -11,7 +11,7 @@ h1{
   text-transform: uppercase;
   color: var(--color-bg-fiveterny);
 }
-h1:hover{
+.logo:hover{
   transition: .3s all;
   font-size: rem(50);
 }
@@ -30,4 +30,11 @@ h5{
 }
 h6{
   font-size: var(--fz-h6);
+}
+
+.titre{
+  background-color: var(--color-bg-secondary);
+  margin: 0;
+  padding: 40px;
+  text-decoration: underline;
 }

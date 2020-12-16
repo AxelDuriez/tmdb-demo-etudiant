@@ -1,26 +1,38 @@
 //STYLE DE NOTRE HEADER
 
 header{
-  height: 150px;
-  color: var(--color-text-tertiary);
-  background-color: var(--color-bg-tertiary);
-}
+  height: 100px;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
 
-header ul{
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
+  border: 4px var(--color-bg-tertiary) solid;
 
-header li{
-  list-style: none;
-  cursor: pointer;
-}
+  ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 
-h1{
-  margin: 0;
-  cursor: pointer;
+  li{
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  li:hover{
+    color: var(--color-text-tertiary);
+    text-decoration: underline;
+  }
+
+  h1{
+    margin: 0;
+    cursor: pointer;
+  }
+
+  h1:hover{
+    color: var(--color-text-tertiary);
+  }
 }

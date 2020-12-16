@@ -12,12 +12,12 @@ video{
 
 .hero p{
   font-family: var(--ff-title-primary);
-  font-size: var(--fz-h1);
+  font-size: var(--fz-big);
   font-weight: bold;
-  color: var(--color-text-secondary);
-  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-text-primary);
+  background-color: rgba(1, 5, 15, 0.7);
   margin: 0;
   position: absolute;
-  padding: 20px 40px;
-  border-radius: 30px;
+  padding: 70px 150px;
+  border-radius: 50px;
 }

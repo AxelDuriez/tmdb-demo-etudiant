@@ -1,3 +1,42 @@
+//BOUTON POUR REMONTER EN HAUT DE LA PAGE
+
+document.addEventListener("DOMContentLoaded", function(event){
+
+    //script pour la fleche qui remonte
+    document.querySelector('#remonte').addEventListener("click", fscroll);
+
+    function fscroll(e){
+
+        window.scroll({
+            top:0,
+            left:0,
+            behavior:'smooth'
+        })
+    }
+    //Script pour la transition smooth vers la section contact dans le footer
+    var destination;
+
+    var boutondeux =document.querySelector('#cont');
+
+    boutondeux.addEventListener("click", fscrolll);
+
+    function fscrolll(pEvt){
+        var cible = pEvt.currentTarget.getAttribute("id");
+
+        if(cible == "cont") {
+            destination = document.querySelector('#contacts').offsetTop;
+        }
+
+        window.scroll({
+            top: destination,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", function(){
 
 let connexion = new MovieDB();

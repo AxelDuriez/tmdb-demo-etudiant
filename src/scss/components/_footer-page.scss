@@ -8,6 +8,43 @@ footer{
 
   border: 4px var(--color-bg-tertiary) solid;
 
+  .medias{
+    width: 15%;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    article{
+      width: 60px;
+      height: 60px;
+      border: 2px var(--color-text-primary) solid;
+      border-radius: 100%;
+      vertical-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article:hover{
+      transition: .3s all;
+      font-size: rem(30);
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    .facebook{
+      background-color: var(--color-facebook);
+    }
+    .instagram{
+      background-color: var(--color-instagram);
+    }
+    .twitter{
+      background-color: var(--color-twitter);
+    }
+  }
+
   .infos{
     display: flex;
     flex-direction: column;
@@ -17,6 +54,8 @@ footer{
     span{
       font-family: var(--ff-title-primary);
     }
+
+
 
   }
 

@@ -32,6 +32,12 @@
     scroll-snap-align: start;
   }
 
+  .carousel-item:hover{
+    transition: .3s all;
+    font-size: rem(22);
+    text-decoration: underline;
+  }
+
   ::-webkit-scrollbar-track{
     background-color: var(--color-bg-secondary);
   }

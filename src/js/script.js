@@ -39,17 +39,15 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 document.addEventListener("DOMContentLoaded", function(){
 
-let connexion = new MovieDB();
+    let connexion = new MovieDB();
 
-connexion.requeteDernierFilm();
+    connexion.requeteDernierFilm();
 
 })
 
 class MovieDB{
 
     constructor() {
-
-        console.log("Constructeur")
 
         this.APIkey = "2ed19bb8abf51968b90eb9a455fdc344";
 
@@ -59,7 +57,7 @@ class MovieDB{
 
         this.imgPath = "https://image.tmdb.org/t/p/";
 
-        this.totalFilm = 8;
+        this.totalFilm = 9;
 
     }
 
@@ -69,13 +67,13 @@ class MovieDB{
 
         requete.addEventListener("loaded", this.retourRequeteDernierFilm.bind(this));
 
-        //requete.open("GET", "https://api.themoviedb.org/3/movie/now_playing?api_key=2ed19bb8abf51968b90eb9a455fdc344&language=fr-CA&page=1")
-
-        requete.open("GET", this.baseURL + "/movie/now_playing?api_key=" + this.APIkey + "&language=" + this.lang + "&page=1")
+        requete.open("GET", this.baseURL + "movie/now_playing?page=1&language=" + this.lang + "&&api_key" + this.APIkey);
 
         requete.send();
 
     }
+
+    //https://web.microsoftstream.com/video/e305022a-c0ad-4e07-b433-2814bdc309c4?list=user&userId=a9537877-fe51-44f4-9a14-520d6a15864c 9min20
 
     retourRequeteDernierFilm(e){
 

@@ -36,3 +36,31 @@ header{
     color: var(--color-text-tertiary);
   }
 }
+
+@media screen and (max-width: $vw-medium){
+
+  header{
+
+    li{
+      font-size: rem(15);
+    }
+
+  }
+
+}
+
+@media screen and (max-width: $vw-small){
+
+  header{
+    height: 200px;
+  }
+
+  ul{
+    flex-direction: column;
+  }
+
+  .logo{
+    order: -1;
+  }
+
+}

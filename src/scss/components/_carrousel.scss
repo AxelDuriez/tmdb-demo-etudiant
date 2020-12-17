@@ -24,6 +24,10 @@
     scroll-snap-type: x mandatory;
   }
 
+  li{
+    list-style: none;
+  }
+
   .carousel-item{
     margin-left: 1rem;
 

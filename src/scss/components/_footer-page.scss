@@ -9,11 +9,11 @@ footer{
   border: 4px var(--color-bg-tertiary) solid;
 
   .medias{
-    width: 15%;
+    //width: 15%;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 
     article{
       width: 60px;
@@ -37,11 +37,31 @@ footer{
     .facebook{
       background-color: var(--color-facebook);
     }
+
+    .facebook:hover{
+      background-color: var(--color-bg-primary);
+      color: var(--color-facebook);
+      border-color: var(--color-facebook);
+    }
+
     .instagram{
       background-color: var(--color-instagram);
     }
+
+    .instagram:hover{
+      background-color: var(--color-bg-primary);
+      color: var(--color-instagram);
+      border-color: var(--color-instagram);
+    }
+
     .twitter{
       background-color: var(--color-twitter);
+    }
+
+    .twitter:hover{
+      background-color: var(--color-bg-primary);
+      color: var(--color-twitter);
+      border-color: var(--color-twitter);
     }
   }
 
@@ -82,5 +102,22 @@ footer{
 
 }
 
+@media screen and (max-width: $vw-large){
 
+  footer{
+    height: 250px;
+
+    flex-direction: column;
+  }
+
+  .medias{
+    width: 100%;
+
+    article{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}
 

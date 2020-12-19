@@ -1,4 +1,32 @@
 
+.fiche-film{
+
+  height: 1800px;
+
+  background-image: url("../../images/image-temp.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    width: 45%;
+  }
+
+  h2{
+    font-size: rem(55);
+  }
+
+  .zone{
+    width: 1200px;
+    height: 1800px;
+    background-color: rgba(1, 5, 15, 0.7);
+  }
+
+}
+
 .liste-acteurs{
   display: flex;
   flex-wrap: wrap;
@@ -7,5 +35,52 @@
 
 .liste-acteurs .acteur{
   width: calc(20% - 30px);
+}
+
+@media screen and (max-width: $vw-large){
+
+  .fiche-film{
+
+    background-size: 700px;
+
+    .liste-acteurs{
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .acteur{
+        width: calc(25% - 30px);
+      }
+    }
+
+  }
+
+
+
+}
+
+@media screen and (max-width: $vw-small){
+
+  .fiche-film{
+
+    height: 2300px;
+
+    background-size: 500px;
+
+    .liste-acteurs{
+
+      .acteur{
+        width: calc(50% - 30px);
+      }
+    }
+
+    .zone{
+      height: 2300px;
+    }
+
+  }
+
+
+
 }
 

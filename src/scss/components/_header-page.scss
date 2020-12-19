@@ -20,20 +20,30 @@ header{
     list-style: none;
     cursor: pointer;
     text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li:hover{
-    color: var(--color-text-tertiary);
-    text-decoration: underline;
+    background-color: var(--color-text-tertiary);
+    color: var(--color-text-primary);
   }
 
   h1{
-    margin: 0;
+    margin-right: 100px;
+    margin-left: 100px;
     cursor: pointer;
   }
 
   h1:hover{
     color: var(--color-text-tertiary);
+  }
+
+  a:hover{
+    color: var(--color-text-primary);
   }
 }
 

@@ -34,6 +34,23 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+class Carousel{
+    constructor(element, options = {}) {
+        
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function (){
+
+    new Carousel(document.querySelector('#carousel'), {
+        slidesToScroll: 1,
+        slidesVisible: 3
+    })
+
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", function(){
 
     let connexion = new MovieDB();
@@ -41,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function(){
     if(document.location.pathname.search("fiche-film.html") > 0){
         let params = ( new URL(document.location) ).searchParams;
 
-        console.log(params);
-        //connexion.requeteInfosFilm();
+        //console.log(params);
+        connexion.requeteInfosFilm( params.get("id") );
     }else{
         connexion.requeteDernierFilm();
     }
@@ -128,9 +145,7 @@ class MovieDB{
 
         requete.addEventListener("loadend", this.retourRequeteInfosFilm.bind(this) );
 
-        requete.open("GET", "https://api.themoviedb.org/3/movie/now_playing?api_key=2ed19bb8abf51968b90eb9a455fdc344&language=fr-Ca&page=1");
-
-        //requete.open("GET", this.baseURL + "/movie/now_playing?api_key=" + this.APIkey + "&language=" +this.lang + "&page=1");
+        requete.open("GET", this.baseURL + "/movie/" + movieId + "?api_key=" + this.APIkey + "&language=" + this.lang);
 
         requete.send();
 
@@ -144,9 +159,7 @@ class MovieDB{
 
         let data;
 
-        //console.log(target.responseText);
-
-        data = JSON.parse(target.responseText).results;
+        data = JSON.parse(target.responseText);
 
         console.log(data);
 
@@ -155,6 +168,12 @@ class MovieDB{
     }
 
     afficheInfosFilm(data) {
+
+        document.querySelector("h2").innerHTML = data.title;
+
+        document.querySelector("img").innerHTML = data.logo_path;
+
+        document.querySelector("p").innerHTML = data[i].overview || "Pas de description disponnible";
 
         // for (let i = 0; i < this.totalFilm; i++) {
         //

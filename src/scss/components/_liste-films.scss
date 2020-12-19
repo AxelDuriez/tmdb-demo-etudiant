@@ -11,9 +11,8 @@
 
   article {
     width: 24%;
-    height: 1200px;
+    height: 900px;
     padding: 20px;
-    text-align: center;
     color: var(--color-text-primary);
     font-size: rem(17);
 
@@ -24,16 +23,18 @@
 
     background-color: rgba(1, 5, 15, 0.7);
 
-    a{
-      margin-top: auto;
+    text-align: left;
+
+    h2{
+      text-align: center;
     }
 
   }
 
   article:hover{
       transition: .3s all;
-      font-size: rem(22);
-      text-decoration: underline;
+      font-size: rem(15);
+      background-color: rgba(95, 34, 34, 0.7);
   }
 
   .film{
@@ -58,7 +59,17 @@
 
 }
 
+@media screen and (max-width: $vw-small){
 
+  .liste-films{
+
+    article {
+      width: 98%;
+    }
+
+  }
+
+}
 
 
 

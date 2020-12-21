@@ -3,7 +3,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 
   padding: 50px;
 
@@ -11,7 +10,7 @@
 
   article {
     width: 24%;
-    height: 900px;
+    height: 100%;
     padding: 20px;
     color: var(--color-text-primary);
     font-size: rem(17);

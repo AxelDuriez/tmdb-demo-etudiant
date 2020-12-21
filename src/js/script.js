@@ -32,23 +32,6 @@ document.addEventListener("DOMContentLoaded", function(event){
     }
 });
 
-///////////////////////////////////////////////////////////////////////////////////
-
-class Carousel{
-    constructor(element, options = {}) {
-        
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function (){
-
-    new Carousel(document.querySelector('#carousel'), {
-        slidesToScroll: 1,
-        slidesVisible: 3
-    })
-
-})
-
 //////////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -175,24 +158,6 @@ class MovieDB{
 
         document.querySelector("p").innerHTML = data[i].overview || "Pas de description disponnible";
 
-        // for (let i = 0; i < this.totalFilm; i++) {
-        //
-        //     let unArticle = document.querySelector(".template>article.film").cloneNode(true);
-        //
-        //     unArticle.querySelector("h2").innerHTML = data[i].title;
-        //
-        //     unArticle.querySelector("p.description").innerHTML = data[i].overview || "Pas de description disponnible";
-        //
-        //     let src = this.imgPath + "w185" + data[i].poster_path;
-        //
-        //     let uneImage = unArticle.querySelector("img");
-        //     uneImage.setAttribute("src", src);
-        //     uneImage.setAttribute("alt", data[i].title);
-        //
-        //     document.querySelector(".liste-films").appendChild(unArticle);
-        //
-        //
-        // }
     }
 
 }
